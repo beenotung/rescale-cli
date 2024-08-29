@@ -82,6 +82,7 @@ Usage: rescale-cli [OPTIONS] VALUE1 VALUE2 ...
 This tool calculates proportional values based on input and a full value.
 
 Options:
+
   -f, --full NUMBER    Set the full value (default: 100)
   -a, --array          Output result as an array
   -r, --row            Output result as space-separated values in a row (default)
@@ -91,15 +92,32 @@ Options:
   -v, --version        Display version information
 
 Arguments:
+
   VALUE1 VALUE2 ...    Input values to be proportionally adjusted
 
 Examples:
-  rescale-cli 30 20 50
-  rescale-cli -f 1000 300 200 500
-  rescale-cli --array 1 2 3 4
-  rescale-cli 10 15 25 --full 50 --line
+
+  $ rescale-cli 1 2 3
+  17 33 50
+
+  $ rescale-cli --array 1 2 3
+  [ 17, 33, 50 ]
+
+  $ npx rescale-cli --full 10 1 2 3 --line
+  2
+  3
+  5
+
+  $ npx -y rescale-cli 1 3 1 4 --full 50 --array
+  Warning: exceeds 1
+  [ 6, 17, 6, 22 ]
+
+  $ npx --yes rescale-cli 1 3 1 4 --full 49 --array
+  Warning: reminds 1
+  [ 5, 16, 5, 22 ]
 
 Description:
+
   The script takes a series of numeric values and adjusts them proportionally
   to fit within a specified full value (default 100).
 
@@ -109,6 +127,7 @@ Description:
   a warning message will be displayed showing the difference.
 
 Note:
+
   The full value must be a positive integer.
 
   The options can be specified anywhere in the argument.
