@@ -25,6 +25,10 @@ for (let i = 2; i < process.argv.length; i++) {
       process.exit(0)
     case '-f':
     case '--full':
+      if (i + 1 == process.argv.length) {
+        console.error('Error: missing argument after ' + JSON.stringify(arg))
+        process.exit(1)
+      }
       arg = process.argv[++i]
       full = +arg
       if (!Number.isInteger(full)) {
@@ -33,10 +37,9 @@ for (let i = 2; i < process.argv.length; i++) {
         )
         process.exit(1)
       }
-      if (full < 0) {
+      if (full <= 0) {
         console.error(
-          'Error: full value should be larger than zero, got ' +
-            JSON.stringify(arg),
+          'Error: full value should be larger than zero, got ' + arg,
         )
         process.exit(1)
       }
