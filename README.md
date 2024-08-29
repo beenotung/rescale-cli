@@ -27,39 +27,35 @@ You can also install `rescale-cli` with [pnpm](https://pnpm.io/), [yarn](https:/
 ## Usage
 
 ```
-rescale-cli v${pkg.version}
-Usage: rescale-cli [OPTIONS] VALUE1 VALUE2 ...
-
-This tool calculates proportional values based on input and a full value.
-
-Options:
-  -f, --full NUMBER    Set the full value (default: 100)
-  -a, --array          Output result as an array
-  -r, --row            Output result as space-separated values in a row (default)
-  -l, --line           Output result with each value on a new line
-
-  -h, --help           Display this help message
-  -v, --version        Display version information
-
-Arguments:
-  VALUE1 VALUE2 ...    Input values to be proportionally adjusted
-
-Examples:
-
-Description:
-  The script takes a series of numeric values and adjusts them proportionally
-  to fit within a specified full value (default 100).
-
-  The result is output in the specified format (array, row, or line).
-
-  If the adjusted values don't exactly match the full value due to rounding,
-  a warning message will be displayed showing the difference.
-
-Note:
-  The full value must be a positive integer.
-
-  The options can be specified anywhere in the argument.
+rescale-cli [OPTIONS] VALUE1 VALUE2 ...
 ```
+
+**Description**:
+
+The script takes a series of numeric values and adjusts them proportionally
+to fit within a specified full value (default 100).
+
+The result is output in the specified format (array, row, or line).
+
+If the adjusted values don't exactly match the full value due to rounding,
+a warning message will be displayed showing the difference.
+
+**Note**:
+
+The full value must be a positive integer.
+
+The options can be specified anywhere in the argument.
+
+### CLI Options
+
+| Short Flag | Long Flag   | Argument | Description                                      | Default |
+| ---------- | ----------- | -------- | ------------------------------------------------ | ------- |
+| `-f`       | `--full`    | NUMBER   | Set the full value (a positive integer)          | 100     |
+| `-a`       | `--array`   |          | Output result as an array                        |         |
+| `-r`       | `--row`     |          | Output result as space-separated values in a row | ✓       |
+| `-l`       | `--line`    |          | Output result with each value on a new line      |         |
+| `-h`       | `--help`    |          | Display the help message                         |         |
+| `-v`       | `--version` |          | Display version information                      |         |
 
 ### Usage Example
 
