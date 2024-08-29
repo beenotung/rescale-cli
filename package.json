@@ -19,6 +19,10 @@
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "bin": {
+    "rescale-cli": "cli.js",
+    "rescale": "cli.js"
+  },
   "files": [
     "dist"
   ],

@@ -30,6 +30,8 @@ You can also install `rescale-cli` with [pnpm](https://pnpm.io/), [yarn](https:/
 rescale-cli [OPTIONS] VALUE1 VALUE2 ...
 ```
 
+There is also an alias `rescale`, which works the same as `rescale-cli`
+
 **Description**:
 
 The script takes a series of numeric values and adjusts them proportionally
@@ -60,13 +62,13 @@ The options can be specified anywhere in the argument.
 ### Usage Example
 
 ```javascript
-$ rescale-cli 1 2 3
+$ rescale 1 2 3
 17 33 50
 
 $ rescale-cli --array 1 2 3
 [ 17, 33, 50 ]
 
-$ npx rescale-cli --full 10 1 2 3 --line
+$ npx --yes rescale-cli --full 10 1 2 3 --line
 2
 3
 5
@@ -75,7 +77,7 @@ $ npx -y rescale-cli 1 3 1 4 --full 50 --array
 Warning: exceeds 1
 [ 6, 17, 6, 22 ]
 
-$ npx --yes rescale-cli 1 3 1 4 --full 49 --array
+$ npx rescale-cli 1 3 1 4 --full 49 --array
 Warning: reminds 1
 [ 5, 16, 5, 22 ]
 ```

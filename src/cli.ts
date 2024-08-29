@@ -103,7 +103,7 @@ Examples:
   $ rescale-cli --array 1 2 3
   [ 17, 33, 50 ]
 
-  $ npx rescale-cli --full 10 1 2 3 --line
+  $ npx --yes rescale-cli --full 10 1 2 3 --line
   2
   3
   5
@@ -112,7 +112,7 @@ Examples:
   Warning: exceeds 1
   [ 6, 17, 6, 22 ]
 
-  $ npx --yes rescale-cli 1 3 1 4 --full 49 --array
+  $ npx rescale-cli 1 3 1 4 --full 49 --array
   Warning: reminds 1
   [ 5, 16, 5, 22 ]
 
