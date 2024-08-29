@@ -1,6 +1,6 @@
 {
   "name": "rescale-cli",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Calculates proportional values based on input and a full value",
   "keywords": [
     "rescale",
