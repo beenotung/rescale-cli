@@ -1,26 +1,38 @@
 {
   "name": "rescale-cli",
   "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "author": {
+    "name": "Beeno Tung",
+    "email": "aabbcc1241@yahoo.com.hk",
+    "url": "https://beeno-tung.surge.sh"
+  },
+  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beenotung/rescale-cli.git"
+  },
+  "homepage": "https://github.com/beenotung/rescale-cli#readme",
+  "bugs": {
+    "url": "https://github.com/beenotung/rescale-cli/issues"
+  },
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "tsc --noEmit",
     "clean": "rimraf dist",
     "build": "rimraf dist && tsc -p . && rimraf dist/tsconfig.tsbuildinfo",
     "tsc": "tsc -p ."
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@types/node": "^22.5.0",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.5.4"
-  },
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ]
+  }
 }
