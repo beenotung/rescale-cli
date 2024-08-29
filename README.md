@@ -67,24 +67,19 @@ Note:
 > rescale-cli 1 2 3
 17 33 50
 
-> rescale-cli -f 10 1 2 3
-2 3 5
-
 > npx rescale-cli --array 1 2 3
 [ 17, 33, 50 ]
 
-> npx -y rescale-cli 10 15 25 31 --full 50 --line
-Warning: reminds 1
-6
-9
-15
-19
-
-> npx --yes rescale-cli 10 15 25 31 30 --full 50 --line
-Warning: exceed 1
+> rescale-cli --full 10 1 2 3 --line
+2
+3
 5
-7
-11
-14
-14
+
+> npx -y rescale-cli 1 3 1 4 --full 50 --array
+Warning: exceeds 1
+[ 6, 17, 6, 22 ]
+
+> npx --yes rescale-cli 1 3 1 4 --full 49 --array
+Warning: reminds 1
+[ 5, 16, 5, 22 ]
 ```

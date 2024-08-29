@@ -126,7 +126,7 @@ try {
 if (reminds > 0) {
   console.error('Warning: reminds ' + reminds)
 } else if (reminds < 0) {
-  console.error('Warning: exceed ' + -reminds)
+  console.error('Warning: exceeds ' + -reminds)
 }
 
 switch (mode) {
