@@ -1,13 +1,9 @@
 {
   "name": "rescale-cli",
   "version": "0.0.0",
-  "description": "",
+  "description": "Calculates proportional values based on input and a full value",
   "keywords": [],
-  "author": {
-    "name": "Beeno Tung",
-    "email": "aabbcc1241@yahoo.com.hk",
-    "url": "https://beeno-tung.surge.sh"
-  },
+  "author": "Beeno Tung <aabbcc1241@yahoo.com.hk> (https://beeno-tung.surge.sh)",
   "license": "BSD-2-Clause",
   "repository": {
     "type": "git",
